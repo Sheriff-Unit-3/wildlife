@@ -33,13 +33,16 @@ local function predator_brain(self)
 			local player = mobkit.get_nearby_player(self)
 			local objs = core.get_objects_inside_radius(pos, 15)
 			local wolfs = 0
+			local players = 0
 			if player and vector.distance(pos, player:get_pos()) < 10 then
 				for _, obj in ipairs(objs) do
 					if obj:get_luaentity().name == self.object:get_luaentity().name then
 						wolfs = wolfs + 1
+					elseif obj:is_player() then
+						players = players + 1
 					end
 				end
-				if wolfs < 3 then
+				if wolfs / players < 2 then
 					mobkit.hq_runfrom(self, 9, player)
 				else
 					mobkit.hq_hunt(self, 10, player)
