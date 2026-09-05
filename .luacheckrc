@@ -10,5 +10,5 @@ read_globals = {
 	"vector",
 
 	-- Dependencies
-	"mobkit"
+	"mobkit", "xcompat"
 }

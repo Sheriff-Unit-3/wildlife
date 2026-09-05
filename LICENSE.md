@@ -26,6 +26,9 @@ SOFTWARE.
 
 ## Exceptions
 
+[`wildlife_egg`](/textures/wildlife_egg.png) and [`wildlife_egg_overlay`](/textures/wildlife_egg_overlay.png)
+are both from Mobs Redo by TenPlus1, licensed under CC0.
+
 The lua code in `wildlife.register_egg` is originally from Mobs Redo by TenPlus1:
 
 ```txt

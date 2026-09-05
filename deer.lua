@@ -1,5 +1,6 @@
 local S = wildlife.S
 local node_dps_dmg = wildlife.node_dps_dmg
+local mob = "wildlife:deer"
 
 local function herbivore_brain(self)
 	if mobkit.timer(self, 1) then
@@ -43,7 +44,7 @@ local function herbivore_brain(self)
 	end
 end
 
-core.register_entity("wildlife:deer", {
+core.register_entity(mob, {
 	physical = true,
 	stepheight = 3,
 	collide_with_objects = true,
@@ -84,3 +85,5 @@ core.register_entity("wildlife:deer", {
 		end
 	end,
 })
+
+wildlife.register_egg(mob, S("Deer Spawn Egg"), "wildlife_deer.png", { wildlife = 1, egg = 1, spawn_egg = 1 })
