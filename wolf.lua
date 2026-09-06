@@ -63,7 +63,7 @@ core.register_entity(mob, {
 	collide_with_objects = true,
 	collisionbox = { -0.3, -0.01, -0.3, 0.3, 0.7, 0.3 },
 	visual = "mesh",
-	mesh = "wolf.b3d",
+	mesh = "wildlife_wolf.b3d",
 	textures = { "wildlife_wolf.png" },
 	visual_size = { x = 1.3, y = 1.3 },
 	static_save = true,

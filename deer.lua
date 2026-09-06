@@ -50,7 +50,7 @@ core.register_entity(mob, {
 	collide_with_objects = true,
 	collisionbox = { -0.35, -0.19, -0.35, 0.35, 0.65, 0.35 },
 	visual = "mesh",
-	mesh = "herbivore.b3d",
+	mesh = "wildlife_deer.b3d",
 	textures = { "wildlife_deer.png" },
 	visual_size = { x = 1.3, y = 1.3 },
 	static_save = true,
