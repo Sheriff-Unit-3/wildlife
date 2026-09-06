@@ -2,7 +2,7 @@ local S = wildlife.S
 local node_dps_dmg = wildlife.node_dps_dmg
 local mob = "wildlife:deer"
 
-local function herbivore_brain(self)
+local function deer_logic(self)
 	if mobkit.timer(self, 1) then
 		node_dps_dmg(self)
 	end
@@ -51,7 +51,7 @@ core.register_entity(mob, {
 	collisionbox = { -0.35, -0.19, -0.35, 0.35, 0.65, 0.35 },
 	visual = "mesh",
 	mesh = "herbivore.b3d",
-	textures = { "herbivore.png" },
+	textures = { "wildlife_deer.png" },
 	visual_size = { x = 1.3, y = 1.3 },
 	static_save = true,
 	makes_footstep_sound = true,
@@ -75,7 +75,7 @@ core.register_entity(mob, {
 		walk = { range = { x = 10, y = 29 }, speed = 30, loop = true },
 		stand = { range = { x = 1, y = 5 }, speed = 1, loop = true },
 	},
-	logic = herbivore_brain,
+	logic = deer_logic,
 	on_punch = function(self, puncher, time_from_last_punch, tool_capabilities, dir)
 		if mobkit.is_alive(self) then
 			local hvel = vector.multiply(vector.normalize({ x = dir.x, y = 0, z = dir.z }), 4)

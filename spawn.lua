@@ -6,17 +6,15 @@ local spawn_reduction = core.settings:get("wildlife.spawn_reduction") or 0.5
 
 local function spawnstep(dtime)
 	for _, plyr in ipairs(core.get_connected_players()) do
-		if math.random() < dtime * 0.2 then -- each player gets a spawn chance every 5s on average
+		if math.random() < dtime * 0.2 then
 			local vel = plyr:get_player_velocity()
 			local spd = vector.length(vel)
-			local chance = spawn_rate * 1 / (spd * 0.75 + 1) -- chance is quadrupled for speed=4
+			local chance = spawn_rate * 1 / (spd * 0.75 + 1)
 
 			local yaw
 			if spd > 1 then
-				-- spawn in the front arc
 				yaw = plyr:get_look_horizontal() + math.random() * 0.35 - 0.75
 			else
-				-- random yaw
 				yaw = math.random() * math.pi * 2 - math.pi
 			end
 			local pos = plyr:get_pos()

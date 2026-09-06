@@ -2,7 +2,7 @@ local S = wildlife.S
 local node_dps_dmg = wildlife.node_dps_dmg
 local mob = "wildlife:wolf"
 
-local function predator_brain(self)
+local function wolf_logic(self)
 	if mobkit.timer(self, 1) then
 		node_dps_dmg(self)
 	end
@@ -64,7 +64,7 @@ core.register_entity(mob, {
 	collisionbox = { -0.3, -0.01, -0.3, 0.3, 0.7, 0.3 },
 	visual = "mesh",
 	mesh = "wolf.b3d",
-	textures = { "kit_wolf.png" },
+	textures = { "wildlife_wolf.png" },
 	visual_size = { x = 1.3, y = 1.3 },
 	static_save = true,
 	makes_footstep_sound = true,
@@ -88,7 +88,7 @@ core.register_entity(mob, {
 		walk = { range = { x = 10, y = 29 }, speed = 30, loop = true },
 		stand = { range = { x = 1, y = 5 }, speed = 1, loop = true },
 	},
-	logic = predator_brain,
+	logic = wolf_logic,
 	on_punch = function(self, puncher, time_from_last_punch, tool_capabilities, dir)
 		if mobkit.is_alive(self) then
 			local hvel = vector.multiply(vector.normalize({ x = dir.x, y = 0, z = dir.z }), 4)

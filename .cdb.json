@@ -1,0 +1,13 @@
+{
+  "$schema": "https://content.luanti.org/api/cdb_schema/",
+  "title": "Wildlife",
+  "tags": ["mobs", "survival", "food", "mtg", "environment", "pve"],
+  "type": "MOD",
+  "dev_state": "ACTIVELY_DEVELOPED",
+  "ai_disclosure": "NONE",
+  "license": "MIT",
+  "media_license": "MIT",
+  "repo": "https://github.com/sheriff-unit-3/wildlife",
+  "issue_tracker": "https://github.com/sheriff-unit-3/wildlife/issues/new/choose/",
+  "short_description": "Adds complex wildlife"
+}
